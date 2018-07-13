@@ -259,6 +259,10 @@ class WKWebView extends React.Component {
      * A Boolean value that sets whether diagonal scrolling is allowed.
     */
     directionalLockEnabled: PropTypes.bool,
+    /**
+     * Should this WebView navigate to URLs that are claimed by other iOS apps?
+     */
+    overrideAppLinks: PropTypes.bool,
   };
 
   state = {
@@ -354,6 +358,7 @@ class WKWebView extends React.Component {
         onShouldStartLoadWithRequest={onShouldStartLoadWithRequest}
         pagingEnabled={this.props.pagingEnabled}
         directionalLockEnabled={this.props.directionalLockEnabled}
+        overrideAppLinks={this.props.overrideAppLinks}
       />;
 
     return (

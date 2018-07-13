@@ -503,6 +503,11 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
   if (isJSNavigation) {
     decisionHandler(WKNavigationActionPolicyCancel);
   }
+  else if (_overrideAppLinks) {
+    // Undocumented enum value that permits the WebView to load URLs even
+    // if they're claimed by other apps: https://stackoverflow.com/a/44942814
+    decisionHandler(WKNavigationActionPolicyAllow + 2);
+  }
   else {
     decisionHandler(WKNavigationActionPolicyAllow);
   }
