@@ -1,3 +1,6 @@
+> Note: This is a reverb fork so that we can prevent links in lp native that go to core dashboard pages from opening in core's native app.
+> To publish, sync upstream changes via merge -- which should contain a version bump -- and then publish manually with `npm publish`.
+
 ## WKWebView Component for React Native
 
 [![npm version](https://badge.fury.io/js/react-native-wkwebview-reborn.svg)](https://badge.fury.io/js/react-native-wkwebview-reborn)
